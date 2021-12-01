@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: trial
-        image: ghcr.io/thejaysmith/trial:v1
+        image: agilestrategist/trial:latest
         ports:
         - containerPort: 8080
 ---
@@ -26,6 +26,26 @@ spec:
   selector:
     app: trial
   ports:
-    - port: 8082
+    - port: 8083
       targetPort: 8080
   type: LoadBalancer
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: trial
+  namespace: monitoring
+  labels:
+    app: trial
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      release: prometheus
+  endpoints:
+  - port: trial
+    path: /metrics
+    interval: 15s
+  namespaceSelector:
+    matchNames:
+    - default
