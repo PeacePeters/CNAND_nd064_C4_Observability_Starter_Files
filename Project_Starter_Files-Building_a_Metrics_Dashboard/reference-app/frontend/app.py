@@ -1,12 +1,9 @@
 import logging
-from os import getenv
 from flask import Flask, render_template, request, jsonify
 import threading
 import requests
 import time
 import random
-import pymongo
-from flask_pymongo import PyMongo
 from prometheus_flask_exporter import PrometheusMetrics
 from jaeger_client import Config
 
