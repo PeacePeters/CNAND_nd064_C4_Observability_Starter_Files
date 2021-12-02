@@ -59,7 +59,7 @@ Affected Area: Backend Service
 
 Severity: High
 
-Description: The /star endpoint throws a 405 error when accessing it. This is caused by the absence of MongoDB URL which makes it available for the cluster. We need to deploy MongoDB and ensure it is avalable for the cluster.
+Description: The /star endpoint throws a 405 error when accessing it. This is caused by the absence of MongoDB URL which makes it available for the cluster. We need to deploy MongoDB and ensure it is avalable for the cluster. Here is the trace span mongodb://example-mongodb-svc.default.svc.cluster.local:27017/example-mongodb
 
 
 ## Creating SLIs and SLOs
