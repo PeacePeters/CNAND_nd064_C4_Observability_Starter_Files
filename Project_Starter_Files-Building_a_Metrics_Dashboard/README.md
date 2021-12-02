@@ -32,8 +32,7 @@ SLI - 99.5% requests return in 50ms in the past month.
 
 ## Create a Dashboard to measure our SLIs
 
-<img width="1264" alt="SLIs" src="https://user-images.githubusercontent.com/68206315/144474878-e8a46c95-c367-4c05-a5cd-b167f8df1323.png">
-
+<img width="1270" alt="SLIs" src="https://user-images.githubusercontent.com/68206315/144516729-f8d24702-4202-4c86-a89f-c1c9c19d720b.png">
 
 ## Tracing our Flask App
 
